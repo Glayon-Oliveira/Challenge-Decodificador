@@ -1,0 +1,133 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+#text-crip{
+    height: 60%;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    margin-left: 5px;
+    margin-right: 2%;
+    font-size: x-large;
+}
+
+#text-crip::placeholder{
+    color: red;
+    font-size: x-large;    
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 90vh;
+    box-sizing: border-box;
+    background-color:cadetblue;
+    overflow: hidden;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: aquamarine;    
+}
+
+footer h2{
+    margin: 0;
+    font-size: 100%;
+}
+
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 40px;
+    color: red;
+    width: 10%;
+}
+
+#header h1{
+    margin: 0;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 58%;      
+    height: 100%;     
+}
+
+#result{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;  
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    box-sizing: border-box;
+    width: 28%;
+    height: 94%;
+    background-color: white;
+    text-align: center;      
+}
+
+#result h3{
+    max-width: 90%;
+}
+
+#text-result{
+    word-wrap: break-word;
+    max-width: 90%;    
+    max-height: 75%;
+    overflow-y: auto;
+    margin-top: 20%;
+}
+
+#result button{
+    display: none;
+    width: 80%;
+    padding: 5%;
+    margin-bottom: 10%;
+}
+
+#aviso{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: small;    
+    margin-top: 2%;
+    margin-bottom: 5px;    
+}
+
+#icon-aviso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 15px;
+    height: 15px;        
+    border-radius:10px;
+    margin-right: 5px;
+}
+
+button{
+    width: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+}
