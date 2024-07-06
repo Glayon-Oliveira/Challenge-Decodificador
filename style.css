@@ -197,3 +197,13 @@ footer h2{
     background-color:cadetblue;
 }
 
+button{
+    transition: transform 0.1s ease;
+}
+
+button:active{        
+    transform: scale(0.95);
+}
+button:focus{
+    background-color: rgba(0,0,0,0.1);
+}
