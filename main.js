@@ -63,6 +63,12 @@ document.getElementById("descript").onclick = ()=>{
 
 }
 
+document.getElementById("clear").onclick = ()=>{
+
+    textarea.value = "";
+
+}
+
 /**@param {string} text  */
 function criptografar(text){
 
@@ -140,3 +146,4 @@ function descriptografar(text){
     return descriptText;
 
 }
+
