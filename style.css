@@ -28,7 +28,7 @@ main{
     width: 100vw;
     height: 90vh;
     box-sizing: border-box;
-    background-color:cadetblue;
+    background-color:gainsboro;
     overflow: hidden;
 }
 
@@ -38,7 +38,8 @@ footer{
     align-items: center;
     width: 100vw;
     height: 10vh;
-    background-color: aquamarine;    
+    background-color:lightgray;    
+    color:lightcoral;
 }
 
 footer h2{
@@ -79,7 +80,7 @@ footer h2{
     box-sizing: border-box;
     width: 28%;
     height: 94%;
-    background-color: white;
+    background-color:beige;
     text-align: center;      
 }
 
@@ -100,6 +101,10 @@ footer h2{
     width: 80%;
     padding: 5%;
     margin-bottom: 10%;
+    text-align: center;
+    border: none;
+    border-radius: 30px;      
+    background-color:grey;
 }
 
 #aviso{
@@ -135,4 +140,6 @@ footer h2{
     text-align: center;
     border: none;
     border-radius: 30px;
+    background-color: beige;
 }
+
