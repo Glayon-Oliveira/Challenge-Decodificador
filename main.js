@@ -69,6 +69,19 @@ document.getElementById("clear").onclick = ()=>{
 
 }
 
+document.getElementById("copy").onclick = ()=>{
+
+    let result = document.createElement("textarea");
+    result.value = document.getElementById("text-result");
+    result.style.position = "fixed";
+    result.style.visibility = "hidden";
+    result.focus();
+    result.select();    
+
+    console.log(document.execCommand("copy"));
+
+}
+
 /**@param {string} text  */
 function criptografar(text){
 
