@@ -72,14 +72,17 @@ document.getElementById("clear").onclick = ()=>{
 
 document.getElementById("copy").onclick = ()=>{
 
-    let result = document.createElement("textarea");
-    result.value = document.getElementById("text-result");
+    let result = document.createElement("textarea");    
+    result.value = document.getElementById("text-result").textContent;    
     result.style.position = "fixed";
-    result.style.visibility = "hidden";
+    result.style.left = "-9999px";    
+    document.body.appendChild(result);
     result.focus();
     result.select();    
 
-    console.log(document.execCommand("copy"));
+    document.execCommand("copy")
+
+    document.body.removeChild(result);
 
 }
 
