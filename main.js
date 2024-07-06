@@ -15,13 +15,18 @@ document.getElementById("cript").onclick = ()=>{
     textPosCript = criptText;    
 
     if(typeof criptText == "boolean"){
-        console.log(false);
+
+        resultPanel.querySelector("img").style.display = "inline-block";
+        resultPanel.querySelector("h3").style.display = "block";
+        resultPanel.querySelector("p").textContent = mensagem;        
+        resultPanel.querySelector("button").style.display = "none";
+        resultPanel.style.justifyContent = "center";
+        
     }else{
 
         resultPanel.querySelector("img").style.display = "none";
         resultPanel.querySelector("h3").style.display = "none";
-        resultPanel.querySelector("p").textContent = criptText;
-        resultPanel.querySelector("p").className = "text-result";
+        resultPanel.querySelector("p").textContent = criptText;    
         resultPanel.querySelector("button").style.display = "block";
         resultPanel.style.justifyContent = "space-between";
 
@@ -33,11 +38,17 @@ document.getElementById("cript").onclick = ()=>{
 document.getElementById("descript").onclick = ()=>{
 
     textPreCript = textarea.value;
-    let descriptText = descriptografar(textarea.value);
+    let descriptText = descriptografar(textarea.value);    
     textPosCript = descriptText;    
 
     if(typeof descriptText == "boolean"){
-        console.log(false);
+        
+        resultPanel.querySelector("img").style.display = "inline-block";
+        resultPanel.querySelector("h3").style.display = "block";
+        resultPanel.querySelector("p").textContent = mensagem;
+        resultPanel.querySelector("button").style.display = "none";
+        resultPanel.style.justifyContent = "center";
+
     }else{
 
         resultPanel.querySelector("img").style.display = "none";
@@ -56,10 +67,11 @@ document.getElementById("descript").onclick = ()=>{
 function criptografar(text){
 
     let criptText = "";       
+    let empty = 0;
 
     for(let ii = 0; ii<text.length; ii++){
 
-        if(text[ii] == text[ii].toUpperCase() && !characters.includes(text[ii])){
+        if(text[ii] == text[ii].toUpperCase() && !characters.includes(text[ii]) || text.length == 0){
             console.log(!characters.includes(text[ii]));
             console.log("|"+text[ii]+"|");
             console.log(ii);
@@ -69,9 +81,11 @@ function criptografar(text){
         for(let cc = 0; cc<regras.length; cc++){               
 
             if(text[ii] == regras[cc][0]){
+                if(text[ii] == " ") empty++;
                 criptText += regras[cc][1];                
                 break;
             }else if(cc == regras.length-1){
+                if(text[ii] == " ") empty++;                
                 criptText += text[ii];                
                 break;
             }
@@ -80,6 +94,8 @@ function criptografar(text){
 
     }        
 
+    if(empty == text.length || empty == criptText.length) return false;
+
     return criptText; 
 
 }
@@ -87,21 +103,23 @@ function criptografar(text){
 /**@param {string} text  */
 function descriptografar(text){
     
-    let descriptText = "";       
+    let descriptText = "";     
+    let empty = 0;  
 
     for(let ii = 0; ii<text.length; ii++){
 
-        if(text[ii] == text[ii].toUpperCase() && !characters.includes(text[ii])){
+        if(text[ii] == text[ii].toUpperCase() && !characters.includes(text[ii]) || text.length == 0){
             console.log(!characters.includes(text[ii]));
             console.log("|"+text[ii]+"|");
             console.log(ii);
             return false;
         }
 
+        if(text[ii] == " ") empty++;
+
         for(let cc = 0; cc<regras.length; cc++){               
 
             if(regras[cc][1] == text.substring(ii, ii+regras[cc][1].length)){
-
                 descriptText += regras[cc][0];
                 ii += regras[cc][1].length-1;
                 break;
@@ -116,6 +134,8 @@ function descriptografar(text){
         }            
 
     }        
+
+    if(text.length == empty) return false;
 
     return descriptText;
 
