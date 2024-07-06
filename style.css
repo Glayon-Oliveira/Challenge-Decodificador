@@ -27,9 +27,16 @@ main{
     justify-content: space-between;
     width: 100vw;
     height: 90vh;
-    box-sizing: border-box;
-    background-color:gainsboro;
+    box-sizing: border-box;    
     overflow: hidden;
+}
+
+.main-light{
+    background-color:gainsboro;
+}
+
+.main-dark{
+    background-color: darkslategrey;
 }
 
 footer{
@@ -37,9 +44,16 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 10vh;
-    background-color:lightgray;    
+    height: 10vh;    
     color:lightcoral;
+}
+
+.footer-light{
+    background-color:lightgray;
+}
+
+.footer-dark{
+    background-color: black;
 }
 
 footer h2{
@@ -49,15 +63,31 @@ footer h2{
 
 #header{
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 40px;
     color: red;
     width: 10%;
+    box-sizing: border-box;
 }
 
 #header h1{
     margin: 0;
+}
+
+#color-circule{
+    width: 50%;
+    padding-top: 50%;
+    border-radius: 50%;    
+}
+
+.color-circule-dark{
+    background-color: black;
+}
+
+.color-circule-light{
+    background-color: white;
 }
 
 #content{
@@ -79,10 +109,19 @@ footer h2{
     margin-right: 2%;
     box-sizing: border-box;
     width: 28%;
-    height: 94%;
-    background-color:beige;
+    height: 94%;    
     text-align: center;      
 }
+
+.result-light{
+    background-color:beige;
+}
+
+.result-dark{
+    background-color:dimgrey;
+}
+
+
 
 #result h3{
     max-width: 90%;
@@ -103,7 +142,7 @@ footer h2{
     margin-bottom: 10%;
     text-align: center;
     border: none;
-    border-radius: 30px;      
+    border-radius: 30px;          
     background-color:grey;
 }
 
@@ -119,13 +158,21 @@ footer h2{
 #icon-aviso{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
+    align-items: center;       
     width: 15px;
     height: 15px;        
     border-radius:10px;
     margin-right: 5px;
+}
+
+.icon-aviso-light{
+    background-color: black;
+    color: white;
+}
+
+.icon-aviso-dark{
+    background-color: red;
+    color: black;
 }
 
 #buttons #clear{
@@ -139,7 +186,14 @@ footer h2{
     padding-bottom: 2%;
     text-align: center;
     border: none;
-    border-radius: 30px;
+    border-radius: 30px;    
+}
+
+.buttons-light button{
     background-color: beige;
+}
+
+.buttons-dark button{
+    background-color:cadetblue;
 }
 

@@ -82,6 +82,22 @@ document.getElementById("copy").onclick = ()=>{
 
 }
 
+document.getElementById("color-circule").onclick = ()=>{
+
+    let circule = document.getElementById("color-circule");
+
+    if(circule.className.includes("light")){
+
+        parseLight();
+
+    }else{
+
+        parseDark();
+
+    }
+
+}
+
 /**@param {string} text  */
 function criptografar(text){
 
@@ -160,3 +176,25 @@ function descriptografar(text){
 
 }
 
+
+function parseLight(){
+
+    document.querySelector("main").className = "main-light"
+    document.getElementById("icon-aviso").className = "icon-aviso-light";
+    document.getElementById("buttons").className = "buttons-light";
+    document.getElementById("result").className = "result-light";
+    document.querySelector("footer").className = "footer-light";
+    document.getElementById("color-circule").className = "color-circule-dark"
+
+}
+
+function parseDark(){
+
+    document.querySelector("main").className = "main-dark"
+    document.getElementById("icon-aviso").className = "icon-aviso-dark";
+    document.getElementById("buttons").className = "buttons-dark";
+    document.getElementById("result").className = "result-dark";
+    document.querySelector("footer").className = "footer-dark";
+    document.getElementById("color-circule").className = "color-circule-light"
+
+}
