@@ -31,13 +31,22 @@ document.getElementById("cript").onclick = ()=>{
 }
 
 document.getElementById("descript").onclick = ()=>{
-    
+
+    textPreCript = textarea.value;
     let descriptText = descriptografar(textarea.value);
+    textPosCript = descriptText;    
 
     if(typeof descriptText == "boolean"){
         console.log(false);
     }else{
-        console.log(descriptText);
+
+        resultPanel.querySelector("img").style.display = "none";
+        resultPanel.querySelector("h3").style.display = "none";
+        resultPanel.querySelector("p").textContent = descriptText;
+        resultPanel.querySelector("p").className = "text-result";
+        resultPanel.querySelector("button").style.display = "block";
+        resultPanel.style.justifyContent = "space-between";
+
     }    
 
 
