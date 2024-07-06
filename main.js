@@ -29,9 +29,9 @@ document.getElementById("cript").onclick = ()=>{
         resultPanel.querySelector("p").textContent = criptText;    
         resultPanel.querySelector("button").style.display = "block";
         resultPanel.style.justifyContent = "space-between";
+        textarea.value = "";
 
-    }    
-
+    }
 
 }
 
@@ -57,6 +57,7 @@ document.getElementById("descript").onclick = ()=>{
         resultPanel.querySelector("p").className = "text-result";
         resultPanel.querySelector("button").style.display = "block";
         resultPanel.style.justifyContent = "space-between";
+        textarea.value = "";
 
     }    
 
