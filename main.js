@@ -1,5 +1,5 @@
 const regras = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
-const characters = " abcdefghijklmnopqrstuvwxyz\n";
+const characters = " 1234567890!@#$%¨&*()-_=+'\"|\\,<.>;:/?°~^´`[{]}§abcdefghijklmnopqrstuvwxyz\n";
 const mensagem = "Digite o texto que você deseja criptografar ou descriptografar";
 
 var textPreCript = "";
